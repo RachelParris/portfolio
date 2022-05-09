@@ -1,8 +1,9 @@
-/* CSS RESET */
+/*** CSS RESET ***/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
   }
 
 html, body {
@@ -18,10 +19,72 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
-/* CSS PER PROJECT */
+/*** CSS PER PROJECT ***/
+:root {
+    --main-bg-color: rgb(247, 242, 235);
+    --nav-color: rgba(136,86,60,1);
+    --bio-color: rgb(247, 242, 235);
+    --skills-color: rgb(206, 176, 152);
+    --skills-logo-color: #fff;
+    --projects-color: rgb(206, 176, 152);
+    --contact-color: rgb(247, 242, 235);
+    --text-color: #292626;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: 'Alex Brush', cursive;
+}
+
+.title, .section-header, .menu {
+    text-align: center;
+}
+
+.menu > li {
+    display: inline;
+}
+
+nav {
+    background-color: var(--nav-color);
+}
+
+/* BIO SECTION */
+#bio {
+    background-color: var(--bio-color);
+}
+
+/* SKILL SECTION */
+#skills {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--skills-color);
+}
+
+.skills-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.skills-list > div {
+    text-align: center;
+    margin: 10px 0;
+}
+
+i {
+    color: var(--skills-logo-color);
+    font-size: 100px;
+}
+
+/* PROJECT SECTION */
 #projects {
     display: flex;
     flex-direction: column;
+    background-color: var(--projects-color);
 }
 
 .project {
@@ -44,4 +107,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .project-description, .project-link {
     padding: 0 10px;
+}
+
+/* CONTACT SECTION */
+#contact {
+    background-color: var(--contact-color);
 }

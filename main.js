@@ -43,7 +43,7 @@ let renderProjects = (projects) => {
     </div>`
     }).join('');
 
-    document.getElementById('projects').innerHTML = render;
+    document.getElementsByClassName('project-list')[0].innerHTML = render;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
